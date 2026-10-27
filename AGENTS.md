@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Maintain reusable agent instructions and configuration. Current scope: Codex.
+Maintain reusable agent instructions and configuration for Codex and Claude Code.
 Keep agent-specific files in their agent directory. Add other agents when
 requested.
 
@@ -39,7 +39,8 @@ descriptions, and review comments.
 ## Changes
 
 - Keep instructions short, explicit, and relevant to their scope.
-- Keep repository maintenance rules here and reusable Codex rules in `codex/`.
+- Keep repository maintenance rules here and reusable agent rules in `codex/`
+  and `claude/`.
 - Check current official documentation before changing configuration behavior.
 - Keep setup notes consistent with the files they describe.
 - Keep secrets and local runtime state out of version control.
