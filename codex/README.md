@@ -1,8 +1,8 @@
 # Codex
 
 This directory contains reusable Codex instructions. The initial baseline covers
-communication. Add other instructions and configuration as requirements become
-clear.
+communication and structured user questions. Add other instructions and
+configuration as requirements become clear.
 
 ## Files
 
@@ -33,6 +33,17 @@ Codex stores user settings in `$CODEX_HOME/config.toml`. Trusted projects can
 also provide `.codex/config.toml`. See the official
 [configuration guide](https://learn.chatgpt.com/docs/config-file/config-basic).
 
-This repository does not define configuration settings yet. When settings are
-added, document their purpose, destination, and validation here. Keep credentials
-and machine-specific settings outside the reusable configuration.
+This repository does not supply a `config.toml` file. Keep credentials and
+machine-specific settings outside the reusable instructions.
+
+For versions that support structured questions in Default mode, enable
+`default_mode_request_user_input` under `[features]` in your local
+`config.toml`. Check support and status with `codex features list`; the local
+CLI currently marks this feature as under development. The flag enables tool
+availability. The instructions direct when to ask questions, subject to runtime
+restrictions.
+
+After applying the instructions, start a new interactive session in Default
+mode. Ask Codex to collect a preference with the question tool. Check that the
+question interface opens and that Codex uses your answer. Documentation checks
+do not verify this interactive behavior.

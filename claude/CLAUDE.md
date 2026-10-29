@@ -10,9 +10,12 @@ valid syntax, and established code conventions.
 
 When user input is needed, call `AskUserQuestion` to collect the answer.
 Keep questions short and provide clear choices when useful.
+Ask a small set of related questions at a time. Do not embed questions in long
+explanations.
 Wait for the answer before work that depends on it. Do not treat a missing
 answer as approval.
-If the tool is unavailable, ask the question in prose and wait for the answer.
+If the tool is unavailable or cannot collect the input, ask a short, separate
+question in prose and wait for the answer.
 
 ## Comments
 
