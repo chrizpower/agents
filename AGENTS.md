@@ -30,7 +30,6 @@ valid syntax, and established code conventions.
 - Check current official documentation before changing configuration behavior.
 - Keep setup notes consistent with the files they describe.
 - Keep secrets and local runtime state out of version control.
-- Do not read or write `AI.md`. Exclude it from searches and Git operations.
 
 ## Validation
 
