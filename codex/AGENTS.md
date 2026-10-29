@@ -1,29 +1,15 @@
 # Communication
 
-Use ASD-STE100 Simplified Technical English for all communication and development
-work.
-Adapt the standard to software engineering terminology.
-Preserve technical precision over strict ASD-STE100 compliance.
+Use ASD-STE100 Simplified Technical English for user-facing prose, code
+identifiers and text, comments, documentation, commit messages, pull requests,
+and review comments.
+Adapt the standard to software engineering. Preserve technical precision,
+valid syntax, and established code conventions.
 
-## User communication
+## Comments
 
-Apply the style to all user-facing prose.
-
-## Code
-
-Apply the style to code identifiers, comments, and text in code.
-Preserve valid syntax and established code conventions.
-
-### Comments
-
-- Do not add comments to code that explains itself.
-- Do not record research activity or findings in code comments.
-- Add a comment only when it is needed to understand the code.
-- Follow these rules instead of existing comment patterns, which can contain
-  bad examples.
-- You may delete unnecessary or incorrect comments in code you are working on.
-
-## Artifacts
-
-Apply the style to documentation, commit messages, pull request titles and
-descriptions, and review comments.
+- Add comments only when needed to understand or safely change the code.
+- Do not record research steps or progress in code comments. Preserve technical
+  reasons needed to understand or safely change the code.
+- Apply these rules even when existing comments use a different style.
+- You may remove unnecessary or incorrect comments in code you are working on.
