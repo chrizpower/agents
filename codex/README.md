@@ -39,12 +39,13 @@ mode. Other settings use the applicable configuration or runtime defaults.
 Install `AGENTS.md` separately for the communication rules.
 Keep credentials and machine-specific settings outside this file.
 
-Merge the file into your existing configuration, preserving other settings.
-For a new setup, run these commands from the repository root:
+Use the [shared settings command](../README.md#apply-shared-settings) from the
+repository root to merge the file into your existing configuration. The command
+also merges Claude settings and installs its output style.
 
 ```sh
-mkdir -p "${CODEX_HOME:-$HOME/.codex}"
-cp -i codex/config.toml "${CODEX_HOME:-$HOME/.codex}/config.toml"
+./scripts/apply-settings --dry-run
+./scripts/apply-settings
 ```
 
 For versions that support structured questions in Default mode, enable

@@ -80,13 +80,13 @@ See the official [output style guide](https://code.claude.com/docs/en/output-sty
 
 ## Apply settings
 
-Install the output style as described above. Then merge [settings.json](settings.json)
-into `~/.claude/settings.json`, preserving other settings. For a new setup, run
-these commands from the repository root:
+Use the [shared settings command](../README.md#apply-shared-settings) from the
+repository root to merge [settings.json](settings.json) and install the output
+style. The command also merges the Codex settings.
 
 ```sh
-mkdir -p ~/.claude
-cp -i claude/settings.json ~/.claude/settings.json
+./scripts/apply-settings --dry-run
+./scripts/apply-settings
 ```
 
 The file selects ASD-STE100 by default and requests a one-hour prompt cache for
