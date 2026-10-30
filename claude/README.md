@@ -8,6 +8,7 @@ including rules for code comments and structured user questions.
 | Source | Intended destination | Purpose |
 | --- | --- | --- |
 | `CLAUDE.md` | `~/.claude/CLAUDE.md` | User-level instructions |
+| [settings.json](settings.json) | `~/.claude/settings.json` | Default output style and prompt cache lifetimes |
 | [output-styles/asd-ste100.md](output-styles/asd-ste100.md) | `~/.claude/output-styles/asd-ste100.md` | ASD-STE100 output style |
 
 The root [AGENTS.md](../AGENTS.md) governs maintenance of this repository.
@@ -76,3 +77,26 @@ explanation and a code comment. Check both against the style rules. This is an
 instruction-based style, not a formal ASD-STE100 compliance check.
 
 See the official [output style guide](https://code.claude.com/docs/en/output-styles).
+
+## Apply settings
+
+Install the output style as described above. Then merge [settings.json](settings.json)
+into `~/.claude/settings.json`, preserving other settings. For a new setup, run
+these commands from the repository root:
+
+```sh
+mkdir -p ~/.claude
+cp -i claude/settings.json ~/.claude/settings.json
+```
+
+The file selects ASD-STE100 by default and requests a one-hour prompt cache for
+the main conversation and a five-minute cache for other requests, including
+subagents. The cache settings require Claude Code v2.1.242 or later.
+Environment overrides, including
+`FORCE_PROMPT_CACHING_5M`, can take precedence. Provider support still applies.
+One-hour cache writes cost more than five-minute writes on metered usage.
+
+Restart Claude Code after installation. Check the style in `/config`. To verify
+the main conversation's cache lifetime, inspect `usage.cache_creation` in JSON
+output from a request: one-hour writes appear under `ephemeral_1h_input_tokens`.
+See the official [prompt caching guide](https://code.claude.com/docs/en/prompt-caching).

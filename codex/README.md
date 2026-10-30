@@ -9,6 +9,7 @@ configuration as requirements become clear.
 | Source | Intended destination | Purpose |
 | --- | --- | --- |
 | `AGENTS.md` | `$CODEX_HOME/AGENTS.md` | User-level instructions |
+| [config.toml](config.toml) | `$CODEX_HOME/config.toml` | Reusable configuration baseline |
 
 `CODEX_HOME` defaults to `~/.codex`. The root [AGENTS.md](../AGENTS.md) governs
 maintenance of this repository.
@@ -33,8 +34,18 @@ Codex stores user settings in `$CODEX_HOME/config.toml`. Trusted projects can
 also provide `.codex/config.toml`. See the official
 [configuration guide](https://learn.chatgpt.com/docs/config-file/config-basic).
 
-This repository does not supply a `config.toml` file. Keep credentials and
-machine-specific settings outside the reusable instructions.
+The supplied [config.toml](config.toml) enables structured questions in Default
+mode. Other settings use the applicable configuration or runtime defaults.
+Install `AGENTS.md` separately for the communication rules.
+Keep credentials and machine-specific settings outside this file.
+
+Merge the file into your existing configuration, preserving other settings.
+For a new setup, run these commands from the repository root:
+
+```sh
+mkdir -p "${CODEX_HOME:-$HOME/.codex}"
+cp -i codex/config.toml "${CODEX_HOME:-$HOME/.codex}/config.toml"
+```
 
 For versions that support structured questions in Default mode, enable
 `default_mode_request_user_input` under `[features]` in your local
