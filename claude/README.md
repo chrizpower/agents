@@ -8,6 +8,7 @@ including rules for code comments and structured user questions.
 | Source | Intended destination | Purpose |
 | --- | --- | --- |
 | `CLAUDE.md` | `~/.claude/CLAUDE.md` | User-level instructions |
+| [output-styles/asd-ste100.md](output-styles/asd-ste100.md) | `~/.claude/output-styles/asd-ste100.md` | ASD-STE100 output style |
 
 The root [AGENTS.md](../AGENTS.md) governs maintenance of this repository.
 
@@ -28,3 +29,50 @@ plain-text question.
 
 See the official [instruction guide](https://code.claude.com/docs/en/memory)
 and [question tool reference](https://code.claude.com/docs/en/tools-reference#askuserquestion-tool-behavior).
+
+## Enable the ASD-STE100 output style
+
+From this repository's root, install the style for your user:
+
+```sh
+mkdir -p ~/.claude/output-styles
+cp -i claude/output-styles/asd-ste100.md ~/.claude/output-styles/asd-ste100.md
+```
+
+For one project, copy the file to that project's `.claude/output-styles/` instead.
+Restart Claude Code after you add or edit the file. Then run `/config`, select
+**Output style**, and select **ASD-STE100**. On Claude Code v2.1.269 or later,
+you can also run:
+
+```text
+/output-style ASD-STE100
+```
+
+This selection is saved in the project's `.claude/settings.local.json`.
+To use the style by default across projects, merge this field into
+`~/.claude/settings.json`. Preserve the file's other settings:
+
+```json
+{
+  "outputStyle": "ASD-STE100"
+}
+```
+
+The setting is case-sensitive. Project settings can override the user default.
+The style sets `keep-coding-instructions: true` to preserve Claude's built-in
+coding instructions when Claude uses the full system prompt. This setting has
+no effect with the shorter system prompt. To require the full prompt, start
+Claude Code with:
+
+```sh
+CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT=0 claude
+```
+
+The style complements `CLAUDE.md`; it does not replace the question rules there.
+Separate subagents do not inherit the output style.
+
+To check it, confirm the selected style in `/config`, then request a short change
+explanation and a code comment. Check both against the style rules. This is an
+instruction-based style, not a formal ASD-STE100 compliance check.
+
+See the official [output style guide](https://code.claude.com/docs/en/output-styles).
