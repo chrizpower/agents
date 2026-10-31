@@ -13,6 +13,9 @@ runtime permits, such as `request_user_input` or `request_user_input_async`.
 Apply this rule in Default mode too. Keep questions short and provide clear
 choices when useful. Ask a small set of related questions at a time. Do not
 embed questions in long explanations.
+When providing choices, put the recommended option first and label it
+"(Recommended)". Briefly explain why. If no option has a clear advantage, do not
+invent a recommendation.
 Wait for required answers before work that depends on them. Continue independent
 work when possible. Do not treat a missing answer as approval. If no permitted
 question tool can collect the input, ask a short, separate question in prose.
