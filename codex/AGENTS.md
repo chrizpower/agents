@@ -28,3 +28,17 @@ Use the runtime approval process for permission requests.
   reasons needed to understand or safely change the code.
 - Apply these rules even when existing comments use a different style.
 - You may remove unnecessary or incorrect comments in code you are working on.
+
+# Subagent context
+
+These rules apply only when delegation is already authorized. Preserve required
+models, roles, reviews, budgets, and permissions.
+
+Start new subagents without inherited conversation history by default. When the
+spawn tool supports `fork_turns`, set it to `"none"`. Inherit history only when
+the assignment needs it.
+
+Give each subagent a short, self-contained brief with its objective, scope,
+applicable instructions, constraints, required checks, and expected result.
+Include relevant decisions from the conversation and exact source or evidence
+pointers. Do not copy unrelated history or raw outputs.
