@@ -27,3 +27,15 @@ question in prose and wait for the answer.
   reasons needed to understand or safely change the code.
 - Apply these rules even when existing comments use a different style.
 - You may remove unnecessary or incorrect comments in code you are working on.
+
+# Git branches
+
+- Follow repository branch rules. Otherwise, use `<type>/<short-description>`
+  with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
+  `refactor`, `test`, or `chore`.
+- Before edits, check the branch and working tree. Reuse the branch if it belongs
+  to the task; otherwise, create one from the repository's intended base branch.
+- Preserve existing changes. Before switching branches, ask if the base branch
+  or ownership of existing work is unclear.
+- Keep one task per branch. Do not reset, overwrite, or delete an existing branch
+  without authorization.
