@@ -42,7 +42,7 @@ For PRs you create, keep the description short with exactly two sections:
 - `## Why`: State why the change is needed.
 
 Keep both sections concise and relevant. End the description with
-`Created with Claude.`
+`Created with an agent.`
 
 If additional details help the reviewer, add a short PR comment with relevant
 validation steps, results, or other necessary information. Omit routine logs
