@@ -33,3 +33,17 @@ question in prose and wait for the answer.
 Follow repository branch naming rules. Otherwise, use `<type>/<short-description>`
 with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
 `refactor`, `test`, or `chore`.
+
+# Pull requests
+
+For PRs you create, keep the description short with exactly two sections:
+
+- `## What`: State what changed.
+- `## Why`: State why the change is needed.
+
+Keep both sections concise and relevant. End the description with
+`Created with Claude.`
+
+If additional details help the reviewer, add a short PR comment with relevant
+validation steps, results, or other necessary information. Omit routine logs
+and unrelated details.
