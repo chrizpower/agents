@@ -60,3 +60,5 @@ Keep both sections concise and relevant. End the description with
 If additional details help the reviewer, add a short PR comment with relevant
 validation steps, results, or other necessary information. Omit routine logs
 and unrelated details.
+
+End every PR comment with `Comment by an agent.`
