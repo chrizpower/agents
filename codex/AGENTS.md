@@ -57,10 +57,10 @@ For PRs you create, keep the description short with exactly two sections:
 - `## Why`: State why the change is needed.
 
 Keep both sections concise and relevant. End the description with
-`Created with an agent.`
+`Created by an 🤖.`
 
 If additional details help the reviewer, add a short PR comment with relevant
 validation steps, results, or other necessary information. Omit routine logs
 and unrelated details.
 
-End every PR comment with `Comment by an agent.`
+End every PR comment with `Comment by an 🤖.`
