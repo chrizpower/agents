@@ -6,6 +6,16 @@ and review comments.
 Adapt the standard to software engineering. Preserve technical precision,
 valid syntax, and established code conventions.
 
+## Prose
+
+Start with the answer, result, or required action. Include the context needed to
+understand it and the detail needed to act or assess the result. Keep each point
+once. Use established technical terms and explain unfamiliar terms when needed.
+
+When the user says an explanation is unclear, explain it again in plain language.
+Add the missing context and use a concrete example when useful. Keep enough
+context for the explanation to stand on its own.
+
 ## User questions
 
 When user input is needed, use an available structured question tool that the

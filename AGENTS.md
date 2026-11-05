@@ -16,7 +16,10 @@ Read and follow the instructions for the agent in use:
 
 ## Changes
 
-- Keep instructions short, explicit, and relevant to their scope.
+- Keep instructions short, explicit, and relevant to their scope. State the desired
+  behavior directly. Remove duplicate rules and rules that do not change behavior.
+- Keep common rules inline. Put conditional detail in a referenced file and state
+  when to read it.
 - Keep repository maintenance rules here and reusable agent rules in `codex/`
   `claude/`, and `pi/`.
 - Check current official documentation before changing configuration behavior.
