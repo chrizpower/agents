@@ -88,6 +88,10 @@ For PRs you create, keep the description short with exactly two sections:
 - `## What`: State what changed.
 - `## Why`: State why the change is needed.
 
+When a work ticket is known, include its ID and link in the PR's `## Why`
+section. Use a closing keyword such as `Closes` only when the PR fully resolves
+the ticket and the tracker supports it. Otherwise, use `Refs`.
+
 End the description with
 `Created by an 🤖.`
 
