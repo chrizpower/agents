@@ -64,6 +64,10 @@ with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
 
 # Pull requests
 
+Use `<type>: <short-description>` for PR titles. Use type `feat`, `fix`, `docs`,
+`refactor`, `test`, or `chore`. Start the description with an imperative verb,
+use sentence case, and omit the final period. Describe the final change.
+
 For PRs you create, keep the description short with exactly two sections:
 
 - `## What`: State what changed.
