@@ -73,7 +73,7 @@ pointers. Do not copy unrelated history or raw outputs.
 
 # Git branch names
 
-Follow repository branch naming rules. Otherwise, use `<type>/<short-description>`
+Use `<type>/<short-description>` for branch names
 with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
 `refactor`, `test`, or `chore`.
 
