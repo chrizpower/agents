@@ -1,8 +1,9 @@
 # Pi setup
 
 [AGENTS.md](AGENTS.md) contains reusable Pi instructions. It keeps the shared
-communication, comment, branch naming, and PR rules. Question tools and subagent
-support depend on the tools and extensions available in the session.
+communication, project convention, comment, branch naming, and PR rules.
+Question tools and subagent support depend on the tools and extensions available
+in the session.
 
 ## Use
 

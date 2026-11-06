@@ -4,7 +4,7 @@ Use ASD-STE100 Simplified Technical English for user-facing prose, code
 identifiers and text, comments, documentation, commit messages, pull requests,
 and review comments.
 Adapt the standard to software engineering. Preserve technical precision,
-valid syntax, and established code conventions.
+valid syntax, and required interfaces.
 
 ## Prose
 
@@ -13,31 +13,49 @@ understand it and the detail needed to act or assess the result. Keep each point
 once. Use established technical terms and explain unfamiliar terms when needed.
 
 When the user says an explanation is unclear, explain it again in plain language.
-Add the missing context and use a concrete example when useful. Keep enough
-context for the explanation to stand on its own.
+Add the missing context and use a concrete example when useful.
 
 ## User questions
 
-When user input is needed, use an available structured question tool that the
-runtime permits, such as `request_user_input` or `request_user_input_async`.
-Apply this rule in Default mode too. Keep questions short and provide clear
-choices when useful. Ask a small set of related questions at a time. Do not
-embed questions in long explanations.
-When providing choices, put the recommended option first and label it
-"(Recommended)". Briefly explain why. If no option has a clear advantage, do not
-invent a recommendation.
-Wait for required answers before work that depends on them. Continue independent
-work when possible. Do not treat a missing answer as approval. If no permitted
-question tool can collect the input, ask a short, separate question in prose.
-Use the runtime approval process for permission requests.
+When input is needed, use a structured question tool permitted by the runtime,
+such as `request_user_input` or `request_user_input_async`, including in Default
+mode. If no permitted tool can collect the input, ask a separate prose question.
+
+Keep questions short and group only related questions. Provide choices when
+useful. Put a clearly recommended option first, label it "(Recommended)", and
+briefly explain why. If no option has a clear advantage, omit the recommendation.
+Wait for required answers before dependent work. Continue independent work.
+Do not treat a missing answer as approval. Use the runtime approval process for
+permission requests.
 
 ## Comments
 
-- Add comments only when needed to understand or safely change the code.
-- Do not record research steps or progress in code comments. Preserve technical
-  reasons needed to understand or safely change the code.
-- Apply these rules even when existing comments use a different style.
-- You may remove unnecessary or incorrect comments in code you are working on.
+Add comments only when needed to understand or safely change the code. Explain
+technical reasons, not research steps or progress. Apply these rules to comments
+you change, even when nearby comments use a different style. Remove unnecessary
+or incorrect comments within the task's scope.
+
+# Project conventions
+
+Read applicable repository instructions before making changes. Treat existing
+code and documentation as potentially outdated or inconsistent. Distinguish
+explicit requirements from incidental patterns. Repetition alone does not
+justify a pattern.
+
+Follow conventions that support correctness, clear responsibilities, and
+testability. Before reusing a pattern, check for concrete problems such as
+duplicated logic, unnecessary coupling, or abstractions that add complexity.
+Preserve required behavior and interfaces unless the task calls for changing
+them. Keep improvements within the task's scope and explain material departures
+from existing patterns.
+
+If an explicit repository rule conflicts with these goals, state the conflict.
+Resolve it using applicable instructions and task requirements. If the decision
+remains unclear, ask the user before dependent changes.
+
+Use the project's validation commands and check their results. Report failures
+and checks not run. Prefer automated checks for mechanical rules; use review
+for judgment calls.
 
 # Subagent context
 
@@ -66,7 +84,7 @@ For PRs you create, keep the description short with exactly two sections:
 - `## What`: State what changed.
 - `## Why`: State why the change is needed.
 
-Keep both sections concise and relevant. End the description with
+End the description with
 `Created by an 🤖.`
 
 If additional details help the reviewer, add a short PR comment with relevant

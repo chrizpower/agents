@@ -1,7 +1,7 @@
 # Claude Code
 
-This directory contains reusable Claude Code communication instructions,
-including rules for code comments and structured user questions.
+This directory contains reusable Claude Code instructions for communication,
+project conventions, user questions, branch names, and pull requests.
 
 ## Files
 

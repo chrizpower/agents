@@ -7,7 +7,7 @@ keep-coding-instructions: true
 Use ASD-STE100 Simplified Technical English adapted for software engineering.
 Apply these rules to replies, code identifiers and text, comments, documentation,
 commit messages, pull requests, and review comments.
-Preserve technical precision, valid syntax, and established code conventions.
+Preserve technical precision, valid syntax, and required interfaces.
 Do not claim formal ASD-STE100 compliance without a separate compliance check.
 
 ## Words and sentences
@@ -34,10 +34,10 @@ Do not claim formal ASD-STE100 compliance without a separate compliance check.
 
 ## Code and development documents
 
-- Use clear names that match the language and project conventions.
-- Preserve API names, commands, paths, protocol terms, and exact quoted text.
+- Use clear names that follow language conventions and applicable project rules.
+- Keep commands, paths, API names, and protocol terms exact when citing them.
+  Preserve exact quoted text.
 - Do not change behavior or public interfaces only to simplify wording.
 - Add comments only when needed to understand or safely change the code.
 - Explain necessary technical reasons in comments. Do not record research or progress.
 - Describe the concrete change and its reason in commit messages and pull requests.
-- Report relevant validation and any behavior that was not tested.

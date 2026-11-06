@@ -1,8 +1,7 @@
 # Codex
 
-This directory contains reusable Codex instructions. The initial baseline covers
-communication and structured user questions. Add other instructions and
-configuration as requirements become clear.
+This directory contains reusable Codex instructions for communication, project
+conventions, user questions, subagent context, branch names, and pull requests.
 
 ## Files
 
