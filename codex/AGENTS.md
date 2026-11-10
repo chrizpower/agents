@@ -6,6 +6,13 @@ and review comments.
 Adapt the standard to software engineering. Preserve technical precision,
 valid syntax, and required interfaces.
 
+## Claims and evidence
+
+Do not accept claims as established facts without sufficient evidence. Check
+claims that affect decisions against relevant sources or observed results. If
+verification is not possible, state the uncertainty. Distinguish an unverified
+claim from a false claim.
+
 ## Prose
 
 Start with the answer, result, or required action. Include the context needed to
