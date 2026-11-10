@@ -107,3 +107,5 @@ validation steps, results, or other necessary information. Omit routine logs
 and unrelated details.
 
 End every PR comment with `Comment by an 🤖.`
+
+Use only the required attribution. Do not add other signatures or agent footers.
