@@ -22,11 +22,6 @@ Do not claim formal ASD-STE100 compliance without a separate compliance check.
 
 ## Structure and evidence
 
-- Start with the answer, result, or required action.
-- Include the context needed to understand the result and the detail needed to act
-  or assess it. Keep each point once.
-- When an explanation is unclear, explain it again in plain language with the
-  missing context. Use a concrete example when useful.
 - Use numbered steps for procedures and bullets for related items.
 - State prerequisites before steps. Keep warnings next to the affected action.
 - Separate verified results, assumptions, and work that was not tested.
@@ -38,6 +33,4 @@ Do not claim formal ASD-STE100 compliance without a separate compliance check.
 - Keep commands, paths, API names, and protocol terms exact when citing them.
   Preserve exact quoted text.
 - Do not change behavior or public interfaces only to simplify wording.
-- Add comments only when needed to understand or safely change the code.
-- Explain necessary technical reasons in comments. Do not record research or progress.
 - Describe the concrete change and its reason in commit messages and pull requests.

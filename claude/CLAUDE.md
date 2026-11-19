@@ -8,9 +8,8 @@ valid syntax, and required interfaces.
 
 ## Claims and evidence
 
-Do not accept claims as established facts without sufficient evidence. Check
-claims that affect decisions against relevant sources or observed results. If
-verification is not possible, state the uncertainty. Distinguish an unverified
+Check claims that affect decisions against relevant sources or observed results.
+If verification is not possible, state the uncertainty. Distinguish an unverified
 claim from a false claim.
 
 ## Prose
@@ -32,8 +31,8 @@ When input is needed, use `AskUserQuestion` if available and permitted by the
 runtime. If it cannot collect the input, ask a separate prose question.
 
 Keep questions short and group only related questions. Provide choices when
-useful. Put a clearly recommended option first, label it "(Recommended)", and
-briefly explain why. If no option has a clear advantage, omit the recommendation.
+useful. Only when one option has a clear advantage, put it first, label it
+"(Recommended)", and briefly explain why.
 Wait for required answers before dependent work. Continue independent work.
 Do not treat a missing answer as approval. Use the runtime approval process for
 permission requests.
@@ -68,18 +67,15 @@ through its normal entry point. State what passed, what failed, and which part
 of the requested outcome remains unverified. Prefer automated checks for
 mechanical rules. Use review for judgment calls.
 
-# Git branch names
+# Branches and pull requests
 
-Use `<type>/<short-description>` for branch names
-with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
-`refactor`, `test`, or `chore`.
+For branch names and PR titles, use type `feat`, `fix`, `docs`, `refactor`,
+`test`, or `chore`.
 
-# Pull requests
-
-Use `<type>: <short-description>` for PR titles. Use type `feat`, `fix`, `docs`,
-`refactor`, `test`, or `chore`. Start the title text after `<type>:` with an
-imperative verb. Use sentence case and omit the final period. Describe the
-final change.
+- Branch names use `<type>/<short-description>` with lowercase, hyphen-separated words.
+- PR titles use `<type>: <short-description>`. Describe the final change in
+  sentence case. Start the text after `<type>:` with an imperative verb and
+  omit the final period.
 
 For PRs you create, keep the description short with exactly two sections:
 
@@ -90,13 +86,9 @@ When a work ticket is known, include its ID and link in the PR's `## Why`
 section. Use a closing keyword such as `Closes` only when the PR fully resolves
 the ticket and the tracker supports it. Otherwise, use `Refs`.
 
-End the description with
-`Created by an 🤖.`
-
 If additional details help the reviewer, add a short PR comment with relevant
 validation steps, results, or other necessary information. Omit routine logs
 and unrelated details.
 
-End every PR comment with `Comment by an 🤖.`
-
-Use only the required attribution. Do not add other signatures or agent footers.
+Use `Created by an 🤖.` as the only signature in PR descriptions and
+`Comment by an 🤖.` as the only signature in PR comments. Put the signature last.
