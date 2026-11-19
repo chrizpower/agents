@@ -31,6 +31,10 @@ sentences. Finish with the result, relevant validation, and any unresolved issue
 
 ## User questions
 
+Use the task and repository context to resolve routine, reversible choices.
+Ask the user when an open decision materially affects scope, compatibility,
+or the requested outcome.
+
 When input is needed, use an available question tool permitted by the runtime.
 If no permitted tool can collect the input, ask a separate prose question.
 
@@ -66,9 +70,10 @@ If an explicit repository rule conflicts with these goals, state the conflict.
 Resolve it using applicable instructions and task requirements. If the decision
 remains unclear, ask the user before dependent changes.
 
-Use the project's validation commands and check their results. Report failures
-and checks not run. Prefer automated checks for mechanical rules; use review
-for judgment calls.
+Run the relevant project checks. When possible, verify the requested outcome
+through its normal entry point. State what passed, what failed, and which part
+of the requested outcome remains unverified. Prefer automated checks for
+mechanical rules. Use review for judgment calls.
 
 # Subagent context
 
@@ -94,8 +99,9 @@ with lowercase, hyphen-separated words and type `feat`, `fix`, `docs`,
 # Pull requests
 
 Use `<type>: <short-description>` for PR titles. Use type `feat`, `fix`, `docs`,
-`refactor`, `test`, or `chore`. Start the description with an imperative verb,
-use sentence case, and omit the final period. Describe the final change.
+`refactor`, `test`, or `chore`. Start the title text after `<type>:` with an
+imperative verb. Use sentence case and omit the final period. Describe the
+final change.
 
 For PRs you create, keep the description short with exactly two sections:
 

@@ -30,4 +30,6 @@ Read and follow the instructions for the agent in use:
 
 For documentation changes, check relative links and run `rtk git diff --check`.
 For configuration changes, also validate syntax and the documented behavior
-with the relevant agent when available. Report any behavior that was not tested.
+with the relevant agent when available. When an instruction changes how an
+agent makes a decision, test it with a representative prompt when practical.
+Report which agent and behavior you tested and any behavior left unverified.
